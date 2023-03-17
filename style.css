@@ -1,0 +1,142 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar{
+    background-color: white;
+    width: 100%;
+}
+.heading{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.logo img{
+    height: 90px;
+    width: 90px;
+}
+.logo{
+    width: 100%;
+}
+.social_media{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: fit-content;
+    padding: 10px;
+}
+.social_media a{
+    color: grey;
+    font-size: 30px;
+}
+.social_media a:hover{
+    color: black;
+}
+.nav-links{
+    width: 100%;
+    margin-top: 10px;
+}
+.nav-links ul{
+    display: flex;
+    justify-content: center;
+}
+.nav-links ul li{
+ list-style: none;
+margin-left: 40px;
+}
+.nav-links ul li a{
+    color: grey;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: px;
+    font-family: 'Comfortaa', cursive;
+
+}
+.nav-links ul li a:hover{
+    color: black;
+    border-bottom: 3px;
+    
+}
+@media (max-width: 800px) {
+    
+}
+#banner{
+    width: 100%;
+    height: 1000px;
+}
+
+
+#cards-wrapper{
+    padding:30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+/* Cards */
+.card{
+    margin-bottom: 20px;
+}
+@media(max-width : 800px){
+    #cards{
+        padding: 0px;
+        margin: 0px;
+    }
+}
+#cards-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+.card{
+    border-radius: 5px;
+    width: 290px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    margin: 20px;
+
+}
+#card-img{
+
+    width: inherit;
+    height:190px ;
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+#card-title{
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+p{
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    margin: 15px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+#search{
+    width: 50%;
+ border-color: grey;
+    border-width: 1px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 3px;
+    padding: 15px;
+}  
+.search h3{
+    font-family:'Comfortaa', cursive;;
+}
+.hamburger-menu{
+    position: fixed;
+    right: 10px;
+    top: 190px;
+}
+.hamburger-menu i{
+    width: 70px;
+    height: 70px;
+}

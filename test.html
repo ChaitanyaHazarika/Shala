@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand-title"><a href="#">Brand Name</a></div>
+        <a href=# class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <div class="navbar-links">
+            <ul>
+                <li class="nav-list"><a href="#">Home</a></li>
+                <li class="nav-list"><a href="#">About</a></li>
+                <li class="nav-list"><a href="#">Dhoop</a></li>
+                <li class="nav-list"><a href="#">AgarBatti</a></li>
+            </ul>
+        </div>
+
+
+
+    </nav>
+
+
+    <div class="card-container">
+        <div id="card">
+            <img src="Test Image.jpg" id="card-img">
+            <div id="card-body">
+                <h4 id="card-title">Title</h4>
+                <p id="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti ali das, placeat
+                    consequatur earum soluta amet praesentium! Explicabo ea autem alias odit labore, dicta iure
+                    exercitationem enim. Possimus consequatur quasi amet!</p>
+            </div>
+        </div>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            /* Navbar */
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                background-color: #333;
+            }
+
+            .nav-list a {
+                font-family: 'PT Sans', sans-serif;
+                color: white;
+                text-decoration: none;
+                font-size: 28px;
+            }
+
+            .navbar-links ul {
+                display: flex;
+                margin-right: 100px;
+            }
+
+            .nav-list {
+                list-style: none;
+                margin-right: 20px;
+                margin-left: 20px;
+
+            }
+
+            .brand-title {
+                display: flex;
+                margin-top: 20px;
+                justify-self: left;
+                font-size: 28px;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin-left: 20px;
+            }
+
+            .brand-title a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .brand-title:hover {
+                cursor: pointer;
+            }
+
+            .toggle-button {
+                position: absolute;
+                top: .75rem;
+                right: 1rem;
+                display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
+            }
+
+            .toggle-button .bar {
+                height: 3px;
+                width: 100%;
+                background-color: white;
+                border-radius: 10px;
+            }
+
+            @media(max-width: 800px) {
+                .toggle-button {
+                    display: flex;
+                }
+
+                .navbar-links {
+                    display: none;
+                    width: 100%;
+                }
+
+                .navbar {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                }
+
+                .navbar-links ul {
+                    width: 100%;
+                    flex-direction: column;
+                }
+
+                .navbar-links li {
+                    text-align: center;
+                    margin: 10px;
+                    
+                }
+
+                .navbar-links.active {
+                    display: flex;
+                }
+            }
+
+
+            /* Cards */
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            }
+
+            #card {
+                border-radius: 5px;
+                width: 290px;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                border: 3px;
+                border-top: 0px;
+                border-style: solid;
+                border-color: lightgray;
+                margin: 20px;
+
+            }
+
+            #card-img {
+
+                width: 290px;
+                height: 200px;
+                border-radius: 5px;
+                margin-bottom: 0px;
+            }
+
+            #card-title {
+                letter-spacing: 1px;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            p {
+                word-wrap: break-word;
+                letter-spacing: 1px;
+                margin: 15px;
+            }
+        </style>
+        <script>
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active')
+            })
+        </script>
+</body>
+
+</html>
